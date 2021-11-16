@@ -1,6 +1,7 @@
 package reactandroid.ggsrivas.com.reactsdklib;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 
 import com.facebook.react.common.LifecycleState;
@@ -19,15 +20,17 @@ public class MySDKActivity extends AppCompatActivity implements DefaultHardwareB
         mReactRootView = new ReactRootView(this);
         mReactInstanceManager = ReactInstanceManager.builder()
                 .setApplication(getApplication())
+                .setCurrentActivity(this)
                 .setBundleAssetName("index.android.bundle")
+                .setJSMainModulePath("index")
                 .addPackage(new MainReactPackage())
                 .addPackage(new MyReactPackage())
                 .setUseDeveloperSupport(BuildConfig.DEBUG)
                 .setInitialLifecycleState(LifecycleState.RESUMED)
                 .build();
-        // The string here (e.g. "MyReactNativeApp") has to match
+        // The string here (e.g. "childApp") has to match
         // the string in AppRegistry.registerComponent() in index.js
-        mReactRootView.startReactApplication(mReactInstanceManager, "MyReactNativeApp", null);
+        mReactRootView.startReactApplication(mReactInstanceManager, "childApp", null);
 
         setContentView(mReactRootView);
 
