@@ -22,6 +22,9 @@ allprojects {
         maven {
             url "https://raw.githubusercontent.com/tarun-khanna/reactAndroidMaven/main/"
         }
+          maven {
+            url "https://raw.githubusercontent.com/tarun-khanna/JscAndroidMaven/main/"
+        }
         
     }
 }
