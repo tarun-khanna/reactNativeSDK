@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import reactandroid.ggsrivas.com.reactsdklib.MySDK;
+
 public class FeedFragment extends Fragment {
 
 
@@ -17,6 +19,7 @@ public class FeedFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_feed, container, false);
         final TextView textView = root.findViewById(R.id.text_feed);
         textView.setText("FeedFragment");
+        MySDK.getInstance().startReactApp(getActivity());
         return root;
     }
 }

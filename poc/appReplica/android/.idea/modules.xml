@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SDKSampleApp.iml" filepath="$PROJECT_DIR$/.idea/modules/SDKSampleApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SDKSampleApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SDKSampleApp.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mysdk/SDKSampleApp.mysdk.iml" filepath="$PROJECT_DIR$/.idea/modules/mysdk/SDKSampleApp.mysdk.iml" />
     </modules>
   </component>
 </project>
