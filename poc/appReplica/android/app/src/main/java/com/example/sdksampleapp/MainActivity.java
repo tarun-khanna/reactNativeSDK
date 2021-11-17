@@ -46,34 +46,34 @@ public class MainActivity extends AppCompatActivity implements DefaultHardwareBa
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (!Settings.canDrawOverlays(this)) {
-                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                        Uri.parse("package:" + getPackageName()));
-                startActivityForResult(intent, OVERLAY_PERMISSION_REQ_CODE);
-            }
-        }
-        mReactRootView = new ReactRootView(this);
-        List<ReactPackage> packages = new PackageList(getApplication()).getPackages();
-        // Packages that cannot be autolinked yet can be added manually here, for example:
-        // packages.add(new MyReactNativePackage());
-        // Remember to include them in `settings.gradle` and `app/build.gradle` too.
-
-        mReactInstanceManager = ReactInstanceManager.builder()
-                .setApplication(getApplication())
-                .setCurrentActivity(this)
-                .setBundleAssetName("index.android.bundle")
-                .setJSMainModulePath("index")
-                .addPackages(packages)
-                .setUseDeveloperSupport(BuildConfig.DEBUG)
-                .setInitialLifecycleState(LifecycleState.RESUMED)
-                .build();
-        // The string here (e.g. "MyReactNativeApp") has to match
-        // the string in AppRegistry.registerComponent() in index.js
-        mReactRootView.startReactApplication(mReactInstanceManager, "AppReplica", null);
-
-        setContentView(mReactRootView);
+//
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//            if (!Settings.canDrawOverlays(this)) {
+//                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+//                        Uri.parse("package:" + getPackageName()));
+//                startActivityForResult(intent, OVERLAY_PERMISSION_REQ_CODE);
+//            }
+//        }
+//        mReactRootView = new ReactRootView(this);
+//        List<ReactPackage> packages = new PackageList(getApplication()).getPackages();
+//        // Packages that cannot be autolinked yet can be added manually here, for example:
+//        // packages.add(new MyReactNativePackage());
+//        // Remember to include them in `settings.gradle` and `app/build.gradle` too.
+//
+//        mReactInstanceManager = ReactInstanceManager.builder()
+//                .setApplication(getApplication())
+//                .setCurrentActivity(this)
+//                .setBundleAssetName("index.android.bundle")
+//                .setJSMainModulePath("index")
+//                .addPackages(packages)
+//                .setUseDeveloperSupport(BuildConfig.DEBUG)
+//                .setInitialLifecycleState(LifecycleState.RESUMED)
+//                .build();
+//        // The string here (e.g. "MyReactNativeApp") has to match
+//        // the string in AppRegistry.registerComponent() in index.js
+//        mReactRootView.startReactApplication(mReactInstanceManager, "AppReplica", null);
+//
+//        setContentView(mReactRootView);
     }
 
     @Override
@@ -121,15 +121,15 @@ public class MainActivity extends AppCompatActivity implements DefaultHardwareBa
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        if (mReactInstanceManager != null) {
-            mReactInstanceManager.onBackPressed();
-        } else {
-            super.onBackPressed();
-        }
-    }
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//        if (mReactInstanceManager != null) {
+//            mReactInstanceManager.onBackPressed();
+//        } else {
+//            super.onBackPressed();
+//        }
+//    }
 
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
