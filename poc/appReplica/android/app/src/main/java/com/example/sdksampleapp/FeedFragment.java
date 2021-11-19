@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import reactandroid.ggsrivas.com.reactsdklib.MySDK;
+import com.example.myapplication.MySDK;
 
 public class FeedFragment extends Fragment {
 
