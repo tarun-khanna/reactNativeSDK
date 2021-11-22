@@ -16,8 +16,6 @@ import com.facebook.react.common.LifecycleState;
 import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler;
 import com.facebook.soloader.SoLoader;
 
-import org.webkit.androidjsc.BuildConfig;
-
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements DefaultHardwareBackBtnHandler {
